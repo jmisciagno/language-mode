@@ -33,7 +33,7 @@ for the overlay."
 
 (advice-add 'flyspell-mode  ; hide FLY in modeline
 	       :before
-	       (lambda (x)
+	       (lambda (n)
 		 (if (bound-and-true-p language-mode)
 		     (setq flyspell-mode-line-string nil)
 		     (setq flyspell-mode-line-string " Fly"))))
